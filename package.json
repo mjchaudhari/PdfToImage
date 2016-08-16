@@ -1,0 +1,35 @@
+{
+  "name": "DocConverter",
+  "version": "1.0.0",
+  "description": "convert the documents in to HTML 5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "master"
+  },
+  "keywords": [
+    "convert"
+  ],
+  "author": "Mahesh",
+  "license": "",
+  "dependencies": {
+    "adm-zip": "^0.4.7",
+    "archiver": "^0.21.0",
+    "body-parser": "^1.14.2",
+    "easy-zip": "0.0.4",
+    "express": "4.13.4",
+    "file": "^0.2.2",
+    "fs-extra": "^0.26.7",
+    "mime-types": "^2.1.10",
+    "multer": "^1.1.0",
+    "path": "^0.12.7",
+    "pdfjs-dist": "^1.4.44",
+    "phantomjs2": "^2.0.2",
+    "promise": "^7.1.1",
+    "shortid": "^2.2.4",
+    "underscore": "^1.8.3"
+  }
+}

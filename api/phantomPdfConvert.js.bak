@@ -1,0 +1,44 @@
+var system = require('system');
+var page = require('webpage').create();
+var url = "";//"http://localhost:8080/index#/pdfviewer?doc=http:%252F%252Flocalhost:8080%252Fapi%252Ffile%252FmyPdf(5).pdf";
+//var url = "http://google.com"
+console.log("phantom started..");
+
+var args = system.args;
+if (args.length === 1) {
+  console.log(JSON.stringify({"message" : 'require url to the pdf viewer page', }));
+} else {
+  args.forEach(function(arg, i) {
+    console.log(i + ': ' + arg);
+  });
+  url = args[1];
+}
+//console.log('Phantom script start...')
+console.log("URL: " + url)
+
+page.open(url, function(status) {
+ if (status !== 'success') {
+    console.log('Unable to access network' + status);
+    phantom.exit();
+  } 
+  else{
+    
+  }
+});
+page.onConsoleMessage = function(msg, lineNum, sourceId) {
+  console.log('PHANTOM: ' + msg + ' (from line #' + lineNum + ' in "' + sourceId + '")');
+};
+page.onResourceError = function(resourceError) {
+    page.reason = resourceError.errorString;
+    page.reason_url = resourceError.url;
+    console.log("failure reason: " + page.reason );
+    console.log(JSON.stringify(resourceError));
+    phantom.exit();
+};
+
+page.onCallback = function(data) {
+  if (data && data.secret && (data.secret === 'ghostly')) {
+    console.log(JSON.stringify(data));
+    phantom.exit();
+  }
+};

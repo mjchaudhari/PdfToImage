@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>convert</title>
+	
+	<link rel="stylesheet" href="./scripts/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="./scripts/bootstrap/dist/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="./scripts/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">
+</head>
+<body ng-controller="mainCtrl">
+	<h1>{{title}}</h1>
+	<toaster-container toaster-options="{'position-class': 'toast-bottom-left'}"></toaster-container>
+	<a ui-sref="index.upload">Upload</a>
+	<div ui-view>
+		
+	</div>	
+	
+	<script src="./scripts/jquery/jquery.js"></script>
+	<script src="./scripts/angular-1.5.0/angular.min.js"></script>
+	<script src="./scripts/angular-1.5.0/angular-animate.min.js"></script>
+	<script src="./scripts/angular-1.5.0/angular-sanitize.min.js"></script>
+	<script src="./scripts/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="./scripts/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+	<script src="./scripts/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+	
+	<script src="./scripts/angular-ui-router.min.js"></script>
+	<script src="./scripts/ng-file-upload-all.min.js"></script>
+	
+	
+	<script src="./scripts/toaster.js"></script>
+	
+	<script src="./app/app.js"></script>
+	<script src="./app/main.controller.js"></script>
+	<script src="./app/upload.controller.js"></script>
+	<!--<script src="./app/pdfhandler.js"></script >
+	<script src="./scripts/pdf.js"></script>-->
+
+</body>
+	
+</html>

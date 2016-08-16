@@ -1,0 +1,12 @@
+
+<div ng-controller="uploadCtrl">
+	upload view - {{title}}
+	<pre>{{file.fileName}}</pre>
+	<form name="_fileUpload" >
+		
+		<div class="btn btn-primary" ng-model="files" ngf-select>Select file</div>
+		<button  type="submit" class="btn btn-primary" ng-click="uploadFiles()" >Upload</button>
+	</form>
+    <a ng-if="resultFile!=''" href="{{resultFile}}">Download converterted Images</a>
+    
+</div>	

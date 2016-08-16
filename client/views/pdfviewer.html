@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			console.log("viewer script: viewer start")
+		
+	</script>
+		<script src="./scripts/jquery/jquery.js"></script>
+	
+		<script src="./scripts/pdf.js"></script>
+		<script src="./scripts/pdf.worker.js"></script>
+		<script src="./app/pdfhandler.js"></script >
+	</head>
+	<div>
+		<span id="page_state"></span>  
+		<span id="conversion_result"></span> 
+	</div>
+	<div>
+	
+	</div>
+	
+	<!-- for legacy browsers add compatibility.js -->
+	<!--<script src="../compatibility.js"></script>-->
+	
+	
+	<script>
+		$(document).ready( function(){
+			console.log("viewer script: start loading pdf...")
+			pdfLoad();	
+		});
+		
+	</script>
+
+<html>
